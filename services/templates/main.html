@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple flask app</title>
+</head>
+<body>
+<p style="font-size:large">Movies</p>
+<a href="{{ url_for('movie_list') }}">List of Movies</a><br>
+<a href="{{ url_for('movie_add') }}">Add New Movie</a><br>
+
+<p style="font-size:large">Users</p>
+<a href="{{ url_for('user_list') }}">List of users</a><br>
+<a href="{{ url_for('user_add') }}">Add New user</a><br>
+
+
+</body>
+</html>

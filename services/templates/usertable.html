@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+<style>
+#customers {
+   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+}
+
+#customers td, #customers th {
+   border: 1px solid #ddd;
+   padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: #4CAF50;
+   color: white;
+}
+</style>
+</head>
+<body>
+<h2>Movies</h2>
+
+<table id="customers" style="width:50%;" >
+     <tr>
+         <tr>
+           {% for item in des %}
+               <th>{{ item[0] }}</th>
+           {% endfor %}
+             <th></th>
+            <th></th>
+         </tr>
+         {% for item in items %}
+         <tr>
+           {% for i in item %}
+                <td>{{ i }}</td>
+           {% endfor %}
+         <td><a href="{{url_for('user_remove',mid=item[0])}}" >delete</a></td>
+         </tr>
+        {% endfor %}
+     </tr>
+
+</table>
+
+</body>
+</html>
